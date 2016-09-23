@@ -48,13 +48,13 @@ class post{
     }
 
     private function getPhoto($src){
-        $name = __DIR__ . DIRECTORY_SEPARATOR . '1.png';
+        $name = __DIR__ . DIRECTORY_SEPARATOR . '1.jpg';
         file_put_contents($name, file_get_contents($src));
         $ch = curl_init($this->getServer());
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true );
         curl_setopt($ch, CURLOPT_POSTFIELDS, array(
-            'photo' => '@' . $name
+            'photo' => curl_file_create($name,'image/jpeg','1.jpg')
         ));
         $response = curl_exec( $ch );
         curl_close( $ch );
