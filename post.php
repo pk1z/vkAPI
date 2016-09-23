@@ -1,8 +1,8 @@
 <?php
 
-namespace vkApi;
+namespace VkApi;
 
-class post{
+class Post{
     private $vk;
     private $owner;
     function __construct(vk $vk, $user = null, $group = null){

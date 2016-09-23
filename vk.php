@@ -1,8 +1,8 @@
 <?php
 
-namespace vkApi;
+namespace VkApi;
 
-class vk {
+class Vk {
     private $token;
     private $count = -1;
     private static $class = null;
