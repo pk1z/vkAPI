@@ -9,7 +9,7 @@ class Vk {
 
     public static function create($token){
         if(!self::$class){
-            self::$class = new vk($token);
+            self::$class = new Vk($token);
         }
         return self::$class;
     }

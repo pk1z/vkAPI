@@ -5,7 +5,7 @@ namespace VkApi;
 class Post{
     private $vk;
     private $owner;
-    function __construct(vk $vk, $user = null, $group = null){
+    function __construct(Vk $vk, $user = null, $group = null){
         $this->vk = $vk;
         if(!$user && !$group){
             throw new \Exception('Not found group or user');
